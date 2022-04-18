@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Faça o calculo para saber quanto de energia seu sistema solar está gerando e descubra se está sendo enganado por empresas deshonestas.">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Calculadora Solar | Saiba Quanto Seu Sistema Solar Está Gerando!</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/calculadora-solar.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">Calculadora<em> Solar</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Início</a></li>
+                            <li class="scroll-to-section"><a href="#our-classes">Sobre Nós</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/sun-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>" calculadora de dimensionamento de energia solar"</h6>
+                <h2>Quantos <em>kWh</em> meu sistema <em>produz</em>?</h2>
+                <div class="main-button scroll-to-section">
+                    <a href="#calcular">Descobrir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    
+
+    
+    <!-- ***** calculadora Item Start ***** -->
+    <section class="section" id="calcular" >
+        <div class="container conteudo">
+            <div class="row espacador">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="titulo-calculadora">
+                        <h2 id="titulo">Calculadora de Fornecimento de <em>Energia Solar</em> </h2> 
+                        <p id="frase">Para calcular a capacidade do seu sistema solar fotovoltaico é necessário informações como potência dos paineis, quantidade de módulos, e a região situada para aplicar a média de radiação solar.</p>
+                        <p id="frase">O cálculo é feito da seguinte forma: <b>Potência Painel x Quant. Paineis x Média Radiação da Região</b></p>
+                        <p id="obs">Observação: o cálculo é tratado como aproximado ao valor exato, afinal, há variantes que não estão inclusas no cálculo como: inclinação e orientação dos modulos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="calculadora">
+                        <div class="row espacador ">
+                            <div class="col-xs-12 col-sm-12  " >
+                                <div id="grPotencia" class="textcamp"><label for="txtPotencia">Potência do Painel</label> <input
+                                        type="number" class="form-control seletor" id="txtPotencia" value=""
+                                        placeholder="Digite o Valor em W Ex:0,400W">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12  "><label class="lblcenter" for="txtEstado txtPlacas">Radiação & Quantidade de Placas</label>
+                                <div class="row tempouso">
+                                    <div class="col-6 col-sm-6">
+                                        <select class="form-control seletor" name="txtRegiao" id="txtRegiao" >
+                                            <option value="0">Selecione uma região</option>
+                                            <option value="3.64">Norte</option>
+                                            <option value="4.48">Nordeste</option>
+                                            <option value="3.36">Sul</option>
+                                            <option value="3.64">Sudeste</option>
+                                            <option value="4.20">Centro-Oeste</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 col-sm-6 textcamp">
+                                        <input type="number" class="form-control seletor textcamp" id="txtPlacas" value="" placeholder="Quantidade de Paineis Solares Ex:10">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row espacador">
+                            <div class="col-xs-12 col-sm-12 botao-calcular">
+                                <a onclick="CalcSolar()" onmouseout="time()" id="botao-calc">Calcular</a>
+                            </div>
+                        </div>
+                        <div class="row espacador ">
+                                <div class="col-xs-4 col-sm-4 vlrtotmob eborder1"><label>Energia Diária</label>
+                                    <h2 class="valorTotal" id="resultado-diaria">kWh 0,00</h2>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 vlrtotmob"><label>Energia Mensal</label>
+                                    <h2 class="valorTotal" id="resultado-mensal">kWh 0,00</h2>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 vlrtotmob eborder3"><label>Energia Anual</label>
+                                    <h2 class="valorTotal" id="resultado-anual">kWh 0,00</h2>
+                                </div>
+                         
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>            
+               
+            
+    </section>
+    <!-- ***** calculadora Item End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section" id="call-to-action" >
+        <div class="container">
+            <div class="row" >
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2> "Use o<em> conhecimento </em>para ajudar pessoas,  <em> nunca </em>para explorá-las"</h2>
+                        <h2> -Marcos E. Fink.</h2>
+                        <p>bus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Our Classes Start ***** -->
+    <section class="section" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Sobre <em>Nós</em></h2>
+                        <img src="assets/images/line-dec.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+              <div class="col-lg-4">
+                <ul>
+                  <li><a href='#tabs-1'><img src="assets/images/sun-first-icon.png" alt="">Quem Somos Nós?</a></li>
+                  <li><a href='#tabs-2'><img src="assets/images/sun-first-icon.png" alt="">Como Começou?</a></a></li>
+                  <li><a href='#tabs-3'><img src="assets/images/sun-first-icon.png" alt="">Nosso Objetivo?</a></a></li>
+                  
+                </ul>
+              </div>
+              <div class="col-lg-8">
+                <section class='tabs-content'>
+                  <article id='tabs-1'>
+                    <img id="tabs-image" src="assets/images/quem-somos.png" >
+                    <h4>Nós somos estudantes de TADS</h4>
+                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                    
+                  </article>
+                  <article id='tabs-2'>
+                    <img id="tabs-image" src="assets/images/como-comecou.png ">
+                    <h4>Tudo começou com uma ideia </h4>
+                    <p>do Adenilson de desmistificar fraudes na instalação de sistemas solares</p>
+                    
+                  </article>
+                  <article id='tabs-3'>
+                    <img id="tabs-image" src="assets/images/nosso-objetivo.png" >
+                    <h4>Temos o objetivo de ajudar</h4>
+                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
+                    
+                  </article>
+    
+                </section>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/user-image.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Integrante</span>
+                            <h4>Adenilson Alencar</h4>
+                            <p>Estudante de TADS no IFPI - Campus Floriano, natural de Floriano - PI.</p>
+                            <ul class="social-icons">
+                                <li><a href="https://www.instagram.com/solar_support/"><i class="fa fa-instagram"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/user-image.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Integrante</span>
+                            <h4>Matheus Pacheco</h4>
+                            <p>Estudante de TADS no IFPI - Campus Floriano, natural de Nazaré - PI.</p>
+                            <ul class="social-icons">
+                                
+                                
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/user-image.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Integrante</span>
+                            <h4>Matheus Pereira</h4>
+                            <p>Estudante de TADS no IFPI - Campus Floriano, natural de Floriano - PI. </p>
+                            <ul class="social-icons">
+                                
+                                
+                                <li><a href="https://www.linkedin.com/in/matheus-pereira-3a057a224/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://github.com/matheudsp/matheudsp"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    </section>
+    <!-- ***** Contact Us Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Desenvolvido por<a href=""> Solar-Group </a> &reg;
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/mixitup.js"></script> 
+    <script src="assets/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
