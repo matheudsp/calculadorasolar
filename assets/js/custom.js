@@ -131,12 +131,12 @@ function CalcSolar() {
 	var pot = Number(document.getElementById("txtPotencia").value);
 	var rad = Number(document.getElementById("txtRegiao").value);
 	var qtdP = Number(document.getElementById("txtPlacas").value);
-	var ediaria = (rad* pot* qtdP);
+	var ediaria = (rad* (pot/1000)* qtdP);
 	var emensal = (ediaria)* 30;
 	var eanual = (emensal)* 12;
-	var ediariaf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 }).format(ediaria);
-	var emensalf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 }).format(emensal);
-	var eanualf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 }).format(eanual);
+	var ediariaf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 }).format(ediaria);
+	var emensalf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 }).format(emensal);
+	var eanualf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 }).format(eanual);
 	
 	if (ediaria === 0 || ediaria === NaN) {
 		document.getElementById("botao-calc").innerHTML = "<a>PREENCHA OS CAMPOS CORRETAMENTE</a>";
