@@ -868,6 +868,11 @@ banner
   text-align: justify;
 
 }
+
+#clique-aqui {
+  font-size: 12px;
+}
+
 .titulo-calculadora h2 {
   font-size: 39px;
   text-transform: uppercase;
