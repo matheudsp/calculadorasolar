@@ -6,6 +6,7 @@
         $("#tabs").tabs();
     });
 
+
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
 	  var box = $('.header-text').height();
