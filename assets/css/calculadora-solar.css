@@ -993,19 +993,10 @@ Sobre Nos
 }
 
 .tabs-content {
-  margin-left: 30px;
   text-align: left;
-  display: inline-block;
   transition: all 0.3s;
 }
 
-.tabs-content img {
-  width: 700px;
-  height: 300px;
-
-  overflow: hidden;
-  border-radius: 5px;
-}
 
 .tabs-content h4 {
   font-size: 23px;
@@ -1024,6 +1015,7 @@ Sobre Nos
 
 #tabs-image {
   background-color: rgba(15, 41, 72, 0.8);
+  width: 100%;
 }
 
 /* 
@@ -1229,7 +1221,7 @@ responsive
     margin-bottom: 30px;
   }
 
-  
+ 
 
   #sobrenos .tabs-content {
     margin-left: 0px;
@@ -1276,7 +1268,11 @@ responsive
   .cta-content p {
     font-size: 12px;
   }
-
+   #tabs ul li a img {
+    max-width: 100%;
+    margin-right: 20px;
+  }
+  
 
 
   .header-area .main-nav .logo {
@@ -1322,6 +1318,8 @@ responsive
     font-size: 13px;
     
   }
+  
+  
 
   .tabs-content img {
     width: 330px;
