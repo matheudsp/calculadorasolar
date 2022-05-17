@@ -1084,22 +1084,70 @@ footer
 footer {
   text-align: center;
   padding: 30px 0px;
+  margin-top: 4rem;
 }
 
-footer p {
-  color: #232d39;
-  font-size: 13px;
+
+
+/* Novas Modificações  */
+
+
+.footer-logo {
+  margin-top: 2rem;
+  
 }
 
-footer p a {
-  cursor: pointer;
+.footer-logo a,.logo-footer em {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.footer-logo a {
+  color: black;
+  
+}
+.logo-footer em{
   color: #f7e654;
 }
 
-footer p a:hover {
-  color: #8c791b;
+
+
+
+.footer {
+  background-color: #f7f7f7;
+  border-top: 2px solid #f7e654;
 }
 
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.footer-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-box a,
+.footer-box p {
+    color: #818181;
+    margin-bottom: 10px;
+}
+
+.footer-box a:hover {
+  color: black
+}
+
+.copyright {
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+  
+}
 
 
 /* 
