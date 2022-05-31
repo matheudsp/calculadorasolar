@@ -812,82 +812,86 @@ banner
   
 }
 
-.eborder1 {
-  border-bottom-left-radius: 10px;
-}
-.eborder3 {
+  .eborder1 {
+    border-bottom-left-radius: 10px;
+  }
+  .eborder3 {
 
-  border-bottom-right-radius: 10px;
-}
+    border-bottom-right-radius: 10px;
+  }
 
-.vlrtotmob h2 {
-  margin: 0;
-  line-height: 21px
-}
+  .vlrtotmob h2 {
+    margin: 0;
+    line-height: 21px
+  }
 
-#calcular {
-  margin: 105px 0px;
-}
+  #calcular {
+    margin: 105px 0px;
+  }
 
-#titulo{
-  margin-bottom: 25px;
-}
-#frase {
-  margin-top: 15px;
-  text-align: justify;
-}
-#frase ,#obs {
-  margin-left: 5px;
-  margin-right: 10px;
-}
-#obs {
-  font-size: 12px;
-  text-align: justify;
+  #titulo{
+    margin-bottom: 25px;
+  }
+  #frase {
+    margin-top: 15px;
+    text-align: justify;
+  }
+  #frase ,#obs {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  #obs {
+    font-size: 12px;
+    text-align: justify;
 
-}
+  }
 
-#clique-aqui {
-  font-size: 12px;
-}
+  #clique-aqui {
+    font-size: 12px;
+  }
 
-.titulo-calculadora h2 {
-  font-size: 39px;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: black;
-  letter-spacing: 1px;
-
-
-}
-
-.titulo-calculadora h2 em {
-  font-style: normal;
-  color: #f7e654;
-}
+  .titulo-calculadora h2 {
+    font-size: 39px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 1px;
 
 
-.titulo-calculadora p {
-  font-size: 16px;
-  color: rgb(60, 60, 60);
-  margin: 0px 0px 0px 0px;
-} 
+  }
+
+  .titulo-calculadora h2 em {
+    font-style: normal;
+    color: #f7e654;
+  }
+
+
+  .titulo-calculadora p {
+    font-size: 16px;
+    color: rgb(60, 60, 60);
+    margin: 0px 0px 0px 0px;
+  } 
 
 
 
 /*
 ---------------------------------------------
-subscribe
+comofunciona
 ---------------------------------------------
 */
 
-#citacao {
+#comofunciona {
   background-color: rgba(35, 45, 57, 0.8);
-  padding: 140px 0px;
+  padding: 180px 0;
   background-image: url(../images/cta-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+
+}
+.cta-tabs {
+  background-color: rgb(193, 193, 193);
 
 }
 
@@ -907,7 +911,7 @@ subscribe
 .cta-content p {
   font-size: 16px;
   color: #fff;
-  margin: 15px 0px 25px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 

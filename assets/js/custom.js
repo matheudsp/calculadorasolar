@@ -125,7 +125,7 @@
 
 })(window.jQuery);
 
-/* calculo de geracao de energia*/
+/* calculo de geracao de energia*/	
 
 
 function CalcSolar() {
@@ -133,7 +133,7 @@ function CalcSolar() {
 	var rad = Number(document.getElementById("txtRegiao").value);
 	var qtdP = Number(document.getElementById("txtPlacas").value);
 	var ediaria = (rad* (pot/1000)* qtdP);
-	var emensal = (ediaria)* 30;
+	var emensal = (ediaria)* 30;		
 	var eanual = (emensal)* 12;
 	var ediariaf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 }).format(ediaria);
 	var emensalf = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 }).format(emensal);

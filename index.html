@@ -45,6 +45,7 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Início</a></li>
                             <li class="scroll-to-section"><a href="#sobrenos">Sobre Nós</a></li>
+                            <li class="scroll-to-section"><a href="#comofunciona">Como Funciona</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -76,7 +77,7 @@
     
     <section class="section" id="calcular" >
         <div class="container conteudo">
-            <div class="row espacador">
+            <div class="row ">
                 <div class="col-xs-12 col-sm-12">
                     <div class="titulo-calculadora">
                         <h2 id="titulo">Calculadora de Fornecimento de <em>Energia Solar</em> </h2> 
@@ -89,7 +90,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
                     <div class="calculadora">
-                        <div class="row espacador ">
+                        <div class="row  ">
                             <div class="col-xs-12 col-sm-12  " >
                                 <div id="grPotencia" class="textcamp"><label for="txtPotencia">Potência do Painel</label> <input
                                         type="number" class="form-control seletor" id="txtPotencia" value=""
@@ -101,11 +102,11 @@
                                     <div class="col-6 col-sm-6">
                                         <select class="form-control seletor" name="txtRegiao" id="txtRegiao" >
                                             <option value="0">Selecione uma região</option>
-                                            <option value="3.64">Norte</option>
-                                            <option value="4.48">Nordeste</option>
-                                            <option value="3.36">Sul</option>
-                                            <option value="3.64">Sudeste</option>
-                                            <option value="4.20">Centro-Oeste</option>
+                                            <option value="3.52">Norte</option>
+                                            <option value="4.34">Nordeste</option>
+                                            <option value="3.255">Sul</option> 
+                                            <option value="3.52">Sudeste</option>
+                                            <option value="4.06">Centro-Oeste</option>
                                         </select>
                                     </div>
                                     <div class="col-6 col-sm-6 textcamp">
@@ -114,12 +115,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row espacador">
+                        <div class="row ">
                             <div class="col-xs-12 col-sm-12 botao-calcular">
                                 <a onclick="CalcSolar()" onmouseout="time()" id="botao-calc">Calcular</a>
                             </div>
                         </div>
-                        <div class="row espacador ">
+                        <div class="row  ">
                                 <div class="col-xs-4 col-sm-4 vlrtotmob eborder1"><label>Energia Diária</label>
                                     <h2 class="valorTotal" id="resultado-diaria">kWh 0,00</h2>
                                 </div>
@@ -139,8 +140,10 @@
                
             
     </section>
+
+    
    
-    <section class="section" id="citacao" >
+    <section class="section" id="comofunciona" >
         <div class="container">
             <div class="row" >
                 <div class="col-lg-10 offset-lg-1">
@@ -154,7 +157,8 @@
             </div>
         </div>
     </section>
-    
+   
+
 
     <section class="section" id="sobrenos">
         <div class="container">
